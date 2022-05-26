@@ -1,0 +1,44 @@
+{
+  "id": "3241853",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27890937",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "100bb",
+      "unicode_decimal": 65723
+    },
+    {
+      "icon_id": "27890944",
+      "name": "数据",
+      "font_class": "shouye",
+      "unicode": "100bc",
+      "unicode_decimal": 65724
+    },
+    {
+      "icon_id": "27890945",
+      "name": "积分",
+      "font_class": "fabu",
+      "unicode": "100bd",
+      "unicode_decimal": 65725
+    },
+    {
+      "icon_id": "27890959",
+      "name": "用户",
+      "font_class": "wode",
+      "unicode": "100be",
+      "unicode_decimal": 65726
+    },
+    {
+      "icon_id": "27890961",
+      "name": "预读",
+      "font_class": "xuexi",
+      "unicode": "100bf",
+      "unicode_decimal": 65727
+    }
+  ]
+}

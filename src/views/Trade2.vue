@@ -14,11 +14,11 @@
           <div class="echarts">价格走势图（要醒目地显示当前的价格、涨跌）</div>
           
           <div class="stty_il trade_button" style="text-align: center">
-             <el-button size="mini" type="danger" round>买入</el-button>
-            
-            <router-link exact to="/Trade2" >
-             <el-button size="mini" plain type="success" round>卖出</el-button>
+            <router-link exact to="/Trade" >
+             <el-button size="mini" plain type="success" round>买入</el-button>
             </router-link>
+             <el-button size="mini"  type="danger" round>卖出</el-button>
+            
 
             <router-link exact to="/Trade3">
              <el-button size="mini" plain  type="info" round>撤单</el-button>
@@ -84,7 +84,7 @@
           </el-row>
 
           <el-row class="stty_il">
-            <el-button size="medium" plain  type="info" round>买入</el-button>
+            <el-button size="medium" plain  type="info" round>卖出</el-button>
           </el-row>
           
           </div>
