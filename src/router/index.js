@@ -10,6 +10,7 @@ import Trade3 from "@/views/Trade3";
 import ActivitySquare from "../views/ActivitySquare";
 import Check from "../views/Check";
 import MyTrade from "@/views/MyTrade";
+import AppTest from '../views/AppTest.vue'
 
 
 
@@ -64,7 +65,11 @@ const routes = [
     name: 'Classify',
     component: Classify
   },
-
+  {
+    path:'/AppTest',
+    name:'AppTest',
+    component:AppTest
+  },
 ]
 
 const router = createRouter({
