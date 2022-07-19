@@ -23,15 +23,16 @@ export default {
         Header
     },
     mounted() {
-        this.startActivityMethod()
+        // post请求的方法先注释掉 避免加载页面是自动提交错误数据 另外 这些功能已测试过
+        //this.startActivityMethod()
         this.getCdaActivitySquareMethod()
-        this.startTransactionMethod()
+        //this.startTransactionMethod()
         this.getCdaActivityTransactionInfoMethod()
-        this.participateActivityMethod()
+        //this.participateActivityMethod()
         this.getCdaReportInfoMethod()
         this.getCdaMyActivityMethod()
         this.getLiquidationInfoMethod()
-        this.liquidationActivityMethod()
+        //this.liquidationActivityMethod()
     },
     methods : {
         // active为活动信息 须组装后提交 注意字段非空判断（参考接口文档）以下代码仅做参考
