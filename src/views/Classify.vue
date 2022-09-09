@@ -57,6 +57,7 @@
   <br>
   <SaveAndSubmit></SaveAndSubmit>
   <br><br><br>
+  <FloatBall :text="'跳转LSMR'"></FloatBall>
 </template>
 
 
@@ -72,7 +73,7 @@ import AddOptions from "@/components/AddOptions";
 import {get, post} from "axios";
 import {mapGetters} from "vuex";
 import 'element-plus/lib/theme-chalk/display.css';
-
+import FloatBall from '@/components/FloatBall';
 
 export default {
   name: 'Classify',
@@ -105,6 +106,7 @@ export default {
     SaveAndSubmit,
     Header,
     AddOptions,
+    FloatBall
   },
   methods: {
     ...mapGetters(['getToken']),

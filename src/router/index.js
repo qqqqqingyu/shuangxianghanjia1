@@ -1,8 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Login from '../views/Login.vue'
-import MainPage from '../views/MainPage.vue'
 import Classify from "@/views/Classify";
- import PublishActivity from "@/views/PublishActivity";
+import PublishActivity from "@/views/PublishActivity";
 import Trade from "@/views/Trade";
 import Trade2 from "@/views/Trade2";
 import Trade3 from "@/views/Trade3";
@@ -10,8 +8,10 @@ import Trade3 from "@/views/Trade3";
 import ActivitySquare from "../views/ActivitySquare";
 import Check from "../views/Check";
 import MyTrade from "@/views/MyTrade";
-import AppTest from '../views/AppTest.vue'
-
+import MyActivity from "../views/MyActivity";
+import Liquidation from "../views/Liquidation";
+import Homepage from "../views/Homepage";
+import FloatBall from "../components/FloatBall";
 
 
 const routes = [
@@ -51,25 +51,30 @@ const routes = [
     component:MyTrade
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/MainPage',
-    name: 'MainPage',
-    component: MainPage
-  },
-  {
     path: '/Classify',
     name: 'Classify',
     component: Classify
   },
   {
-    path:'/AppTest',
-    name:'AppTest',
-    component:AppTest
+    path: '/MyActivity',
+    name:'MyActivity',
+    component: MyActivity
   },
+  {
+    path: '/Liquidation',
+    name:'Liquidation',
+    component: Liquidation
+  },
+  {
+    path: '/Homepage',
+    name:'Homepage',
+    component: Homepage
+  },
+  {
+    path: '/FloatBall',
+    name:'FloatBall',
+    component: FloatBall
+  }
 ]
 
 const router = createRouter({

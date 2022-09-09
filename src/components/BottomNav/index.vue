@@ -2,7 +2,7 @@
   <div class="bottom-nav">
       <ul class="nav-container">
           <li>
-              <router-link exact to="/Trade">
+              <router-link exact to="/Homepage">
                 <span class="iconfont icon-shouye"></span>
                 首页
               </router-link>
@@ -20,13 +20,13 @@
               </router-link>
           </li>
           <li>
-              <router-link exact to="/Trade">
+              <router-link exact to="/MyActivity">
                 <span class="iconfont icon-xuexi"></span>
-                学习空间
+                我发起的
               </router-link>
           </li>
           <li>
-              <router-link exact to="/Login">
+              <router-link exact to="">
                 <span class="iconfont icon-wode"></span>
                 我的
               </router-link>

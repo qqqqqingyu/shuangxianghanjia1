@@ -14,6 +14,24 @@ request.interceptors.request.use(config => {
     /*if (store.getters.token) {
         config.headers['Authorization'] = getToken()
     }*/
+    // add csrftoken to header
+    let cookies = document.cookie
+    if (cookies !== undefined && cookies !== '') {
+        let cookieArray = cookies.split(";");
+        for (let i = 0; i < cookieArray.length; i++) {
+            let keyValue = cookieArray[i];
+            let keyValueArr = keyValue.split("=");
+            if (keyValueArr.length > 1) {
+                let key = keyValueArr[0].replace(" ", "");
+                if ("csrftoken" === key) {
+                    config.headers['X-CSRFToken'] = keyValueArr[1];
+                    break;
+                }
+            }
+        }
+    }
+    // 添加cda请求标识头
+    config.headers['X-CDA-LOGIN-SIGN'] = true;
     return config
 }, error => {
     console.log('err: ' + error)
@@ -25,12 +43,18 @@ request.interceptors.response.use(
     response => {
         // code为非200时抛错
         const res = response.data
-        if (res.code !== 200) {
-            // 后期可优化为响应一个MessageBox
-            window.alert(res.error)
-            return Promise.reject('error')
+        let sign = response.headers['x-cda-redirect-login-sign'];
+        if (sign !== undefined && sign === 'CDA') {
+            let loginRedirectUrl = response.data.content;
+            window.open(loginRedirectUrl, "_self" )
         } else {
-            return response.data
+            if (res.code !== '200') {
+                // 后期可优化为响应一个MessageBox
+                window.alert(res.error)
+                return Promise.reject('error')
+            } else {
+                return response.data
+            }
         }
     },
     error => {
